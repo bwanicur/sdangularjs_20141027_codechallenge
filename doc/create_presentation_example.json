@@ -1,0 +1,9 @@
+{
+    "presentation": {
+        "title": "TESTING TITLE",
+        "presenter": "Benny",
+        "presenter_link_text": "http://mycoolblog.com",
+        "description": "discussing something about AngularJS",
+        "info_links": "http://myslideshere.com"
+    }
+}
