@@ -61,7 +61,7 @@ patch '/presentations/:id' do
   end
 end
 
-delete '/presentation/:id' do
+delete '/presentations/:id' do
   content_type :json
   presentation = Presentation.where(id: params[:id]).first
   if presentation && presentation.destroy
