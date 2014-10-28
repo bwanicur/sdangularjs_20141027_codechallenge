@@ -27,7 +27,7 @@ enable :logging, :dump_errors, :raise_errors unless ENV['RACK_ENV'] == 'producti
 
 before do
   headers 'Access-Control-Allow-Origin' => '*', 
-          'Access-Control-Allow-Methods' => ['OPTIONS', 'GET', 'POST', 'PATCH', 'PUT']  
+          'Access-Control-Allow-Methods' => ['OPTIONS', 'GET', 'POST', 'PATCH', 'PUT', 'DELETE']  
   halt(403, 'Not Authorized') unless params[:token] == 'SD-AngularJS'
 end
 
