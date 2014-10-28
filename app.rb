@@ -26,8 +26,12 @@ require './models/presentation'
 enable :logging, :dump_errors, :raise_errors unless ENV['RACK_ENV'] == 'production'
 
 before do
+  headers 'Access-Control-Allow-Origin' => '*', 
+          'Access-Control-Allow-Methods' => ['OPTIONS', 'GET', 'POST']  
   halt(403, 'Not Authorized') unless params[:token] == 'SD-AngularJS'
 end
+
+set :protection, :false
 
 get '/presentations' do
   content_type :json

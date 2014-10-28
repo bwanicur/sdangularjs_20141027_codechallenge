@@ -7,6 +7,14 @@ All requests must have the following access token *as part of the URL*, "SD-Angu
 Example request to get all presentations:
 GET https://still-island-8402.herokuapp.com/?token=SD-AngularJS
 
+### Objects
+Right now there is only a Presentation object with the following attributes:
+* title (string)
+* presenter (string)
+* presenter_link_text (string) - to link to a presenters website
+* description (text)
+* info_links (text)
+
 ### API
 The API is RESTful and is JSON based.
 
@@ -33,3 +41,6 @@ The API is RESTful and is JSON based.
                     }
                   ```
 * DELETE one presentation:  DELETE https://still-island-8402.herokuapp.com/presentations/:id?token=SD-AngularJS
+
+### Keep in mind...
+This application is graciously hosted on Heroku for free.  That means that sometimes the process that runs the web server might need a few second to "wake up".  Please keep that in mind when making your http requests.
